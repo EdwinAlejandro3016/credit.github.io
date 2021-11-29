@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tarjeta de Credito</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="credito.css">
+	<script src="all.min.js"></script>
+</head>
+<body>
+
+
+	<div class="contenedor">
+		<!-- TARJETA -->
+		<section class="tarjeta" id="tarjeta">
+			<div class="delantera">
+				<div class="logo-marca">
+					<!-- <img src="visa.png" alt=""> -->
+				</div>
+				<img src="chip-tarjeta.png" alt="" class="chip">
+				<div class="datos">
+					<div class="grupo" id="Numero">
+						<p class="label">Numero de Tarjeta</p>
+						<p class="numero">#### #### #### ####</p>
+					</div>
+					<div class="flexbox">
+						<div class="grupo" id="nombre">
+							<p class="label">Nombre de Tarjeta</p>
+							<p class="nombre">Jhon Doe</p>
+						</div>
+
+						<div class="grupo" id="expiracion">
+							<p class="label">Expiracion</p>
+							<p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="trasera">
+				<div class="barra-magnetica"></div>
+				<div class="datos">
+					<div class="grupo" id="firma">
+						<p class="label">Firma</p>
+						<div class="firma"><p></p></div>
+					</div>
+
+					<div class="grupo" id="ccv">
+						<p class="label">CCV</p>
+						<p class="ccv"></p>
+					</div>
+				</div>
+
+				<p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing elit. In optio aliquid culpa maiores, et rem sunt, eum ea modi,</p>
+				<a href="#" class="link-banco">www.mibanco.com</a>
+			</div>
+		</section>
+
+		<!-- CONTENDOR BOTONES -->
+		<div class="contenedor-btn">
+			<button class="btn-abrir-formulario" id="btn-abrir-formulario">
+				<i class="fas fa-plus"></i>
+			</button>
+		</div>
+
+		<!-- FORMULARIO -->
+		<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+			<div class="grupo">
+				<label for="inputNumero">Número Tarjeta</label>
+				<input type="text" name="" id="inputNumero" maxlength="19" autocomplete="off">
+			</div>
+			<div class="grupo">
+				<label for="inputNombre">Nombre</label>
+				<input type="text" name="" id="inputNombre" maxlength="19" autocomplete="off">
+			</div>
+
+			<div class="flexbox">
+				<div class="grupo expira">
+					<label for="selectMes">Expiración</label>
+					<div class="flexbox">
+						<div class="grupo-select">
+							<select name="mes" id="selectMes">
+								<option disabled selected>MES</option>
+
+							
+							</select>
+							<i class="icono fas fa-angle-down"></i>
+						</div>
+						<div class="grupo-select">
+							<select name="year" id="selectYear">
+								<option disabled selected>AÑO</option>
+								
+							</select>
+							<i class="icono fas fa-angle-down"></i>
+						</div>
+					</div>
+				</div>
+				<div class="grupo ccv">
+					<label for="ccv">CCV</label>
+					<input type="text" name="" id="inputCCV" maxlength="3">
+				</div>
+			</div>
+			<button type="submit" class="btn-enviar" >ENVIAR</button>
+		</form>
+	</div>
+	
+<script src="credito.js"></script>
+
+</body>
+</html>
